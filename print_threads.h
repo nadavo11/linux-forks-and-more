@@ -16,7 +16,7 @@ void print_threads(short unsigned int N){
 
         //only the newest thread prints a messege
         if(pid == 0)
-            printf( " Hi. I'm thread number %d", i);
+            printf( " Hi. I'm thread number %d\n", i);
         // ONLY THEN make a child, then shut up forever.
         pid = fork();
         wait(0);

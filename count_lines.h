@@ -14,16 +14,18 @@ void count_lines (short unsigned int G) {
     int g;
     int trash;
 //char *buffer
-    char *buffer[30];
+    char buffer[30];
 
+    //loop through all lines
+    while (fgets(buffer,30,myfile) ){
 
-
-//loop through all lines
-    while (fgets(buffer,30,myfile) {
-//analyze lines
+        //analyze lines
         sscanf(buffer,"/^[^%d]%d/^[^%d]%d",&trash,&g);
         //incremet generation
-        g_count[g]+=1
+        g_count[g]+=1;
 
     }
+
 }
+
+#endif UNTITLED5_COUNT_LINES_H

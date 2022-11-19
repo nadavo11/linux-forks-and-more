@@ -3,7 +3,7 @@
 //
 
 #ifndef UNTITLED5_PRINT_THREADS_H
-
+#include "stdio.h"
 void print_threads(short unsigned int N){
     int i = 0;
     int pid = 0;

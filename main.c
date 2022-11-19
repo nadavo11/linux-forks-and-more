@@ -5,22 +5,22 @@
 
 #include <fcntl.h>
 #include <string.h>
-//#include "count_lines.h"
-//#include "print_pids.h"
-//#include "print_threads.h"
+#include "count_lines.h"
+#include "print_pids.h"
+#include "print_threads.h"
 
 int main(int argc, char* argv[]) {
-//    //open a file
-//    FILE * f = fopen("out.txt","w");
-//
-//    //call print pids
-//    print_pids(f,argv[1],argv[2]);
-//
-//    //call count lines to check it
-//    count_lines(argv[2]);
-//
-//    //call print threads
-//    print_threads(argv[1]);
+    //open a file
+    FILE * f = fopen("out.txt","w");
+
+    //call print pids
+    print_pids(f,argv[1],argv[2]);
+
+    //call count lines to check it
+    count_lines(argv[2]);
+
+    //call print threads
+    print_threads(argv[1]);
 
     char *s = "jhkjh3232 juaj au 88";
     int i;

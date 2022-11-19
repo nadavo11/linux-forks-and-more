@@ -11,7 +11,8 @@
 void count_lines (short unsigned int G) {
     FILE *myfile = fopen("out.txt", "r");
     int *g_count = (int*)malloc(G*sizeof(int));
-    int g
+    int g;
+    int trash;
 //char *buffer
     char *buffer[30];
 
@@ -20,8 +21,9 @@ void count_lines (short unsigned int G) {
 //loop through all lines
     while (fgets(buffer,30,myfile) {
 //analyze lines
-        sscanf("/^[^%d]*/",&g)
+        sscanf(buffer,"/^[^%d]%d/^[^%d]%d",&trash,&g);
+        //incremet generation
+        g_count[g]+=1
 
-//incremet generation
     }
 }

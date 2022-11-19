@@ -1,9 +1,12 @@
 //
 // Created by pc user on 11/19/2022.
 //
-
+#include <unistd.h>
 #ifndef UNTITLED5_PRINT_THREADS_H
 #include "stdio.h"
+#include <sys/wait.h>
+
+
 void print_threads(short unsigned int N){
     int i = 0;
     int pid = 0;

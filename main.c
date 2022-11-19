@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include <sys/types.h>
 #include <unistd.h>
-
 #include <fcntl.h>
 #include <string.h>
 #include "count_lines.h"
@@ -10,17 +9,20 @@
 #include "print_threads.h"
 
 int main(int argc, char* argv[]) {
+    char* p;
+    long N = strtol(argv[1],&p,10);
+    long G = strtol(argv[2],&p,10);
     //open a file
     FILE * f = fopen("out.txt","w");
 
     //call print pids
-    print_pids(f,argv[1],argv[2]);
+    print_pids(f,N,G);
 
     //call count lines to check it
-    count_lines(argv[2]);
+    count_lines(G);
 
     //call print threads
-    print_threads(argv[1]);
+    print_threads(N);
 
     char *s = "jhkjh3232 juaj au 88";
     int i;

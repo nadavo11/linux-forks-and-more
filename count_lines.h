@@ -10,7 +10,7 @@
 #include "string.h"
 void count_lines (short unsigned int G) {
     FILE *myfile = fopen("out.txt", "r");
-    int *g_count = (int*)malloc(G*sizeof(int));
+    int *g_count = (int*)malloc((G+1)*sizeof(int));
     int g;
     int trash;
 //char *buffer
@@ -20,7 +20,7 @@ void count_lines (short unsigned int G) {
     while (fgets(buffer,30,myfile) ){
 
         //analyze lines
-        sscanf(buffer,"/^[^%d]%d/^[^%d]%d",&trash,&g);
+        sscanf(buffer,"%*[^234567890]%d%*[^234567890]%d",&trash,&g);
         //incremet generation
         g_count[g]+=1;
 

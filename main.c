@@ -6,18 +6,18 @@
 #include <fcntl.h>
 #include <string.h>
 
-int main() {
+int main(){
     int N = 2;
     int G = 3;
     int cur_gen = 0;
-    for (int i = 0; i < N; i++) {
+    for(int i = 0; i < N; i++){
         wait(0);
-        if (cur_gen == G) {
+        if(cur_gen == G){
             break;
         }
         int cur_fork = fork();
 
-        if (cur_fork == 0) {
+        if(cur_fork == 0){
             i = -1;
             cur_gen++;
 
@@ -25,7 +25,5 @@ int main() {
         }
     }
     wait(0);
-    printf("my pid is %d, my gen is %d\n", (int) getpid(), cur_gen);
+    printf("my pid is %d, my gen is %d\n", (int)getpid(), cur_gen);
     //printf("my pid is %d\n", (int)getpid());
-
-}

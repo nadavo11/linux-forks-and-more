@@ -24,7 +24,7 @@ void print_pids (int fd, short unsigned int N, short unsigned int G){
     //print to the screen
     printf("my pid is %d, my gen is %d\n", (int)getpid(), gen);
     //print to file
-    fprintf(fd,"my pid is %d, my gen is %d\n", (int)getpid(), gen);
+    fprintf((FILE*)fd,"my pid is %d, my gen is %d\n", (int)getpid(), gen);
 
 }
 #endif //UNTITLED5_PRINT_PIDS_H

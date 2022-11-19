@@ -5,6 +5,7 @@
 #include <sys/wait.h>
 #include <fcntl.h>
 #include <string.h>
+#include "count_lines.h"
 
 int main(){
     int N = 2;
